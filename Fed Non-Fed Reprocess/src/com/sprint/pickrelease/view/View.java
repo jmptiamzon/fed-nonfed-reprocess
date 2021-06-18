@@ -82,6 +82,9 @@ public class View extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		if (event.getSource() == submitBtn) {
+			if (!inputField.getText().trim().isEmpty()) {
+				controller.runApp(inputField.getText().trim());
+			}
 			
 		}
 		
